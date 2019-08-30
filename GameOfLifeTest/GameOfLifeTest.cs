@@ -31,5 +31,17 @@ namespace GameOfLifeTest
 
             Assert.AreEqual(CellStatus.LIVE, result);
         }
+
+        [TestMethod]
+        public void CelulaVivaCon4VecinasVivas()
+
+        {   /*Celula Viva con 3 Vecinas Viva, debe devolver como nuevo estado la celula viva */
+            CellStatus currentStatus = CellStatus.LIVE;
+            int neighborsAlive = 4;
+
+            CellStatus result = RulesGameOfLife.GetNewStatus(currentStatus, neighborsAlive);
+
+            Assert.AreEqual(CellStatus.DEAD, result);
+        }
     }
 }
