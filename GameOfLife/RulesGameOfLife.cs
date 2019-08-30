@@ -36,6 +36,12 @@ namespace GameOfLife
                 result = CellStatus.DEAD;
             }
 
+            if (currentStatus == CellStatus.DEAD && neighborsAlive == 3)
+            {
+                result = CellStatus.LIVE;
+            }
+
+
             return result;
         }
 
